@@ -18,5 +18,5 @@ export const useNotification = (notification: Notification | null) => {
         });
       }
     }
-  }, [notification]);
+  }, [notification, toast]);
 };

@@ -4,7 +4,7 @@ import { revalidatePath } from "next/cache";
 import { CreateSuperheroDto } from "./dto/superhero";
 
 const ADD_SUPERHERO = `${process.env.SUPERHEROES_API_URL}/superheroes` as const;
-export async function addNewSuperhero(prevState: any, formData: FormData) {
+export async function addNewSuperhero(prevState: unknown, formData: FormData) {
   // Transform FormData into CreateSuperheroDto
   const superheroDto: CreateSuperheroDto = {
     name: formData.get('name') as string,
